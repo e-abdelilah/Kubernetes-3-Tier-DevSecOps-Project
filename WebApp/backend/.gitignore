@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+bower_components/
+
+# Cache
+.cache/
+.npm/
+.pnp/
+.pnp.js
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+
+# Optional: TypeScript
+*.tsbuildinfo
