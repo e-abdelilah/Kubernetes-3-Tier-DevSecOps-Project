@@ -1,0 +1,24 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.no-tasks-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.no-tasks h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
