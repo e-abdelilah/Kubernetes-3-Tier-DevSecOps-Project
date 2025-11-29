@@ -7,6 +7,10 @@ const connectToDatabase = require('./config/database');
 
 const app = express();
 
+app.use(express.json());
+app.use(cors());
+
+
 app.use('/api/tasks', require('./routes/tasks'));
 
 connectToDatabase().then(() => {

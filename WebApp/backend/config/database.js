@@ -2,25 +2,12 @@ const mongoose = require("mongoose");
 
 module.exports = async () => {
     try {
-        const connectionParams = {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        };
+        const connectionString = process.env.MONGO_CONN_STR;
 
-        const useDBAuth = process.env.USE_DB_AUTH || false;
-
-        if(useDBAuth){
-            connectionParams.user = process.env.MONGO_USERNAME;
-            connectionParams.pass = process.env.MONGO_PASSWORD;
-        }
-
-        await mongoose.connect(
-            process.env.MONGO_CONN_STR,
-            connectionParams
-        );
+        await mongoose.connect(connectionString);
         console.log("connected to DB");
 
-
+        
     } catch (error) {
             console.log("could not connect to DB", error);
     }
